@@ -1,0 +1,48 @@
+{
+  "name": "targz-glob",
+  "version": "0.0.1",
+  "description": "Glob within tar.gz",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:report": "eslint 'src/**/*.ts' -f json -o report.json  --no-fix",
+    "lint:fix": "eslint 'src/**/*.ts' --fix",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "build": "tsup"
+  },
+  "author": "Dominic Vonk",
+  "license": "MIT",
+  "dependencies": {
+    "glob-regex": "^0.3.2",
+    "tar-stream": "^3.1.6",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.4.2",
+    "@types/tar-stream": "^2.2.2",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.1",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.34.1"
+  }
+}
