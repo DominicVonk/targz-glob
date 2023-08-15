@@ -1,6 +1,6 @@
 {
   "name": "targz-glob",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Glob within tar.gz",
   "type": "module",
   "exports": {
@@ -24,7 +24,8 @@
     "lint:fix": "eslint 'src/**/*.ts' --fix",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "build": "tsup"
+    "build": "tsup",
+    "prepublish": "tsup"
   },
   "author": "Dominic Vonk",
   "license": "MIT",
@@ -44,5 +45,10 @@
     "tsup": "^7.2.0",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
-  }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ]
 }
