@@ -1,6 +1,6 @@
 {
   "name": "targz-glob",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Glob within tar.gz",
   "type": "module",
   "exports": {
